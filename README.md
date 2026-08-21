@@ -1,82 +1,323 @@
-# Infosys-project
-# Milestone 1 - Frontend Common Components Development
+AI-Powered Customer Support Platform with Ticket Resolution Agent (Infosys-project):
+===============
 
-## My Contribution
+Milestone 1 - Frontend Common Components Development
+----------------------------------------------------
 
-For Milestone 1, I was assigned the responsibility of developing the **Common Components** for the frontend of the **AI Ticket Management System**. The main objective of my work was to create reusable React components that can be used throughout the application by different modules such as Employee, Support, and Admin. Instead of creating the same UI elements repeatedly, I designed reusable components so that they can be easily integrated wherever required.
+### My Contribution
 
-During this milestone, I focused on understanding React component architecture, component reusability, props, conditional rendering, routing concepts, and dynamic rendering. I implemented the following components:
+For Milestone 1, I developed reusable React components for the AI Ticket Management System. The objective was to create common UI components that could be reused across Employee, Support, and Admin modules instead of implementing the same functionality repeatedly.
 
-### Button Component
+I developed the following components:
 
-I developed a reusable Button component that supports different button variants such as Primary, Secondary, and Danger. The component accepts properties like button type, click events, disabled state, and custom **CSS** classes, making it flexible enough to be used across different pages of the application.
+*   **Button** – Reusable button with Primary, Secondary, and Danger variants, along with click, disabled, and custom CSS support.
+    
+*   **Loader** – Displays a loading spinner with customizable loading text.
+    
+*   **Modal** – Reusable popup supporting dynamic content through children and multiple closing methods.
+    
+*   **Confirm Dialog** – Provides reusable Confirm and Cancel actions for operations such as deletion and logout.
+    
+*   **Navbar** – Displays application and user information and supports nested components.
+    
+*   **Notification Bell** – Displays notification count and handles large counts using 99+.
+    
+*   **Sidebar** – Dynamically renders navigation items using React Router NavLink.
+    
+*   **Ticket Card** – Displays ticket details such as title, category, priority, status, assignee, and creation date.
+    
+*   **Ticket Table** – Dynamically displays ticket records and handles empty data and row selection.
+    
+*   **Analytics Chart** – Created the reusable structure for displaying analytics data.
+    
+*   **Protected Route** – Implements authentication and role-based route protection with appropriate redirects and loading states.
+    
 
-### Loader Component
+### Technologies Used
 
-I created a Loader component that displays a loading spinner along with customizable loading text. This component can be reused whenever the application is waiting for data from the backend or performing asynchronous operations.
+*   React.js
+    
+*   React Router DOM
+    
+*   JavaScript ES6+
+    
+*   JSX
+    
+*   Vite
+    
 
-### Modal Component
+### Concepts Applied
 
-I implemented a reusable Modal component that displays popup dialogs. It supports dynamic content using React's `children` prop and allows users to close the dialog using either the close button or by clicking outside the modal.
+*   Functional Components
+    
+*   Component Reusability
+    
+*   Props and Children Props
+    
+*   Conditional and Dynamic Rendering
+    
+*   Event Handling
+    
+*   React Router
+    
+*   Protected Routing
+    
+*   Role-Based Access Control
+    
 
-### Confirm Dialog Component
+### Learning Outcome
 
-I developed a reusable Confirm Dialog component specifically for confirmation actions such as deleting a ticket or signing out. The dialog displays a customizable title and message along with Confirm and Cancel actions.
+This milestone helped me understand reusable React architecture, component communication through props, dynamic rendering, routing, and protected access control.
 
-### Navbar Component
+Milestone 2 - Backend ML Classification API Development
+=======================================================
 
-I created the application's Navbar, which displays the application title and logged-in user information. The Navbar is designed to accept nested components, allowing elements like the Notification Bell to be integrated without modifying the Navbar itself.
+### My Contribution
 
-### Notification Bell Component
+For Milestone 2, I worked on the backend API layer responsible for connecting the ticket classification functionality with the application. I implemented the FastAPI request/response structure and classification service for predicting ticket priority.
 
-I implemented a reusable Notification Bell component that displays the unread notification count and triggers an action whenever the notification icon is clicked. The component also handles large notification counts by displaying *99+*.
+The main components developed were:
 
-### Sidebar Component
+*   **Request and Response Schemas** – Defined structured data models for ticket classification requests and responses.
+    
+*   **Classification Route** – Implemented the API endpoint for receiving ticket title, description, and category and returning the classification result.
+    
+*   **Classifier Service** – Implemented the service responsible for loading the trained ML model and TF-IDF vectorizer, processing ticket text, predicting priority, and returning confidence.
+    
+*   **Fallback Classification** – Added a keyword-based heuristic mechanism that can provide a priority prediction when the ML model is unavailable or prediction fails.
+    
 
-I developed a reusable Sidebar component that dynamically renders navigation items using React Router's `NavLink`. Instead of hardcoding navigation links, the Sidebar accepts menu items as props, making it suitable for Employee, Support, and Admin dashboards.
-
-### Ticket Card Component
-
-I created a reusable Ticket Card component to display individual ticket information such as title, category, priority, status, assigned user, and creation date. The component also supports click events for opening ticket details.
-
-### Ticket Table Component
-
-I implemented a reusable Ticket Table component that dynamically renders ticket information using JavaScript's `map()` function. The component gracefully handles empty datasets and allows row selection through click events.
-
-### Analytics Chart Component
-
-I developed the initial structure for the Analytics Chart component. The component is designed to receive analytics data dynamically and can later be integrated with chart libraries such as Recharts.
-
-### Protected Route Component
-
-I implemented a Protected Route component using React Router. It checks the user's authentication status before allowing access to protected pages. It also supports role-based authorization and redirects unauthorized users to the appropriate page while displaying a loader during authentication checks.
-
-
-# Technologies Used
-
-- React.js
-- React Router **DOM**
-- JavaScript (**ES6**+)
-- **JSX**
-- Vite
-
-
-# React Concepts Applied
-
-During this milestone, I gained practical experience with:
-
-- Functional Components
-- Component Reusability
-- Props
-- Children Props
-- Conditional Rendering
-- Dynamic Rendering using `map()`
-- Event Handling
-- React Router
-- Protected Routing
-- Role-Based Access Control
+The classification flow is:
 
 
-# Learning Outcome
+   Ticket Title + Description   
+            ↓  
+   FastAPI Classification API    
+            ↓  
+   ML Classifier        
+            ↓  
+   Priority + Category + Confidence   
 
-This milestone helped me understand how reusable components are designed in React applications and how they improve maintainability and scalability. I also learned how React Router is used for navigation and route protection, how props enable component communication, and how dynamic rendering allows components to work with changing data.
+The classifier supports the priority levels:
+
+*   Critical
+    
+*   High
+    
+*   Medium
+    
+*   Low
+    
+
+### Technologies Used
+
+*   Python
+    
+*   FastAPI
+    
+*   Pydantic
+    
+*   Pickle
+    
+*   Scikit-learn ML model
+    
+*   TF-IDF Vectorizer
+    
+
+### Learning Outcome
+
+This milestone helped me understand backend API development, request/response validation, integrating machine learning models with APIs, error handling, and creating fallback mechanisms for reliable classification.
+
+Milestone 3 - Dataset Analysis and Text Preprocessing
+=====================================================
+
+### My Contribution
+
+For Milestone 3, I focused on understanding and preparing the dataset used for IT ticket priority classification. The dataset contains ticket titles, descriptions, and their corresponding priority labels.
+
+I organized the ML work into separate analysis and preprocessing sections to make the workflow easy to understand and reusable for future development.
+
+### Dataset Analysis
+
+I analyzed the dataset to understand:
+
+*   Number of records and columns
+    
+*   Column names and data types
+    
+*   Missing values
+    
+*   Duplicate records
+    
+*   Unique priority classes
+    
+*   Priority distribution
+    
+*   Ticket title and description lengths
+    
+*   Common words in ticket descriptions
+    
+*   Words associated with different priority levels
+    
+*   Sample tickets for each priority
+    
+
+I also created visualizations to understand the distribution and characteristics of the ticket data.
+
+### Text Preprocessing
+
+I prepared the ticket text for machine learning by:
+
+*   Combining ticket title and description
+    
+*   Converting text to lowercase
+    
+*   Removing unnecessary characters and numbers
+    
+*   Removing extra spaces
+    
+*   Creating a cleaned text field
+    
+
+The preprocessing workflow is:
+
+  Title + Description          
+  ↓  
+  Text Combination          
+  ↓  
+  Lowercase Conversion          
+  ↓  
+  Character Cleaning          
+  ↓  
+  Whitespace Cleaning          
+  ↓  
+  Clean Text   
+
+### Technologies Used
+
+*   Python
+    
+*   Pandas
+    
+*   Matplotlib
+    
+*   Regular Expressions
+    
+
+### Learning Outcome
+
+This milestone helped me understand dataset quality, exploratory data analysis, text characteristics, and the importance of preparing raw text before applying machine learning algorithms.
+
+Milestone 4 - ML Model Training, Evaluation and Prediction
+==========================================================
+
+### My Contribution
+
+For Milestone 4, I worked on developing and evaluating the machine learning model for automatic IT ticket priority classification.
+
+Instead of relying on a single algorithm, I designed the training workflow to compare multiple text-classification models and select the best-performing model based on evaluation metrics.
+
+### Model Development
+
+The ticket title and description are converted into numerical features using **TF-IDF Vectorization**.
+
+I trained and compared:
+
+*   Multinomial Naive Bayes
+    
+*   Logistic Regression
+    
+*   Linear Support Vector Machine (SVM)
+    
+
+The training workflow is:
+
+  Clean Ticket Text          
+  ↓  
+  TF-IDF Vectorization          
+  ↓  
+  Train/Test Split          
+  ↓  
+  Multiple ML Models          
+  ↓  
+  Model Evaluation          
+  ↓  
+  Best Model Selection   
+
+### Model Evaluation
+
+The models are compared using:
+
+*   Accuracy
+    
+*   Precision
+    
+*   Recall
+    
+*   F1-Score
+    
+*   Classification Report
+    
+*   Confusion Matrix
+    
+
+The best-performing model is selected based on the comparison results rather than assuming a particular algorithm in advance.
+
+### Model Artifacts
+
+The selected model and fitted TF-IDF vectorizer are saved as:
+
+   model.pkl  
+   vectorizer.pkl   
+
+These artifacts can then be loaded by the backend classification service.
+
+### Prediction Testing
+
+I created a separate prediction-testing script to load the saved model and vectorizer and test new, unseen support tickets.
+
+The prediction flow is:
+
+New Ticket      
+↓  
+Text Preprocessing      
+↓  
+TF-IDF Vectorizer      
+↓  
+Trained ML Model      
+↓  
+Predicted Priority      
+↓  
+Confidence Score   
+
+### Technologies Used
+
+*   Python
+    
+*   Pandas
+    
+*   Scikit-learn
+    
+*   TF-IDF
+    
+*   Multinomial Naive Bayes
+    
+*   Logistic Regression
+    
+*   Linear SVM
+    
+*   Pickle
+    
+*   Matplotlib
+    
+
+### Learning Outcome
+
+This milestone helped me understand the complete machine learning workflow from feature extraction and model training to model comparison, evaluation, model persistence, and prediction on new tickets. It also helped me understand how a trained ML model can be integrated into a backend API for real-time ticket classification.
+
+Overall Learning
+================
+
+Across these milestones, I gained practical experience in both frontend and backend development along with machine learning. I worked with reusable React components, API development using FastAPI, dataset analysis, text preprocessing, TF-IDF feature extraction, machine learning model training, evaluation, model persistence, and prediction testing.
+
+The overall system connects these components to provide an AI-based ticket management workflow that can automatically classify support tickets based on their content.
