@@ -1,0 +1,60 @@
+title,description,priority
+Server is completely down,No one in office can login to any system,Critical
+Database not responding,All transactions are failing across the application,Critical
+Security breach detected,Unauthorized access found in admin logs,Critical
+Application crashed,The entire portal is showing 500 error for all users,Critical
+Network outage,Internet not working in entire building no one can work,Critical
+Data loss occurred,Important files deleted from server cannot recover,Critical
+Production server down,Live website is down customers cannot access,Critical
+Email server crashed,No one in company can send or receive emails,Critical
+Cannot access email,Outlook not opening for me since morning,High
+VPN connection failing,Unable to connect to office VPN from home,High
+System running very slow,My laptop takes 10 minutes to open any application,High
+Printer not working,Office printer showing offline cannot print documents,High
+Software installation error,Getting error while installing required software tool,High
+Login page not loading,Getting timeout error when opening the login page,High
+Excel file corrupted,Important project file not opening showing error,High
+Antivirus alert,Antivirus detected threat on my system need help,High
+Audio not working,Microphone and speakers not working in my laptop,High
+Need access to shared folder,Require permission to access team project drive,Medium
+Mouse not working properly,Cursor jumping randomly on screen hard to work,Medium
+Monitor flickering,Screen keeps flickering every few minutes,Medium
+Teams call quality bad,Voice breaking during online meetings very often,Medium
+Need software update,Current version outdated need latest version installed,Medium
+Scanner not working,Office scanner not detected by computer,Medium
+Dual monitor setup,Need help connecting second monitor to my laptop,Medium
+Projector not connecting,Laptop not detecting projector in conference room,Medium
+How to change wallpaper,Want to set company wallpaper on my system,Low
+Password reset request,Forgot my portal password please reset it for me,Low
+How to set out of office,Need to configure auto reply message in Outlook,Low
+Request for second monitor,Would like an additional monitor for my desk,Low
+Font size too small,Text appears very small on my screen hard to read,Low
+How to join team meeting,First time using Teams application need help joining,Low
+Keyboard shortcut question,Want to learn useful shortcuts for Excel,Low
+How to share screen,Need to know how to share screen during meetings,Low
+Server room temperature critical,Cooling system failed server room overheating,Critical
+All systems offline,Complete system failure nothing working company wide,Critical
+Ransomware attack detected,Files being encrypted by ransomware need immediate help,Critical
+Backup failure,Automated backup failed three days in a row data at risk,Critical
+Cannot open any application,All installed applications crashing on startup,Critical
+Internet down for whole floor,Entire floor has no internet connectivity,Critical
+ERP system down,SAP system not accessible for entire finance department,Critical
+VPN not connecting from home,Getting authentication failed error on VPN,High
+Blue screen of death,Laptop showing BSOD randomly multiple times today,High
+Cannot send emails,Outlook showing error when sending mails to clients,High
+Projector not working in boardroom,Important client meeting in one hour projector dead,High
+Hard disk making noise,Laptop hard disk making clicking sound fear data loss,High
+RAM usage 100 percent,System extremely slow RAM always at 100 percent usage,High
+Camera not working,Webcam not detected for video calls working from home,High
+Software license expired,Adobe license expired cannot open any Adobe files,High
+Need to share large files,File too large to email need alternate solution,Medium
+Headset not recognized,Bluetooth headset not connecting to laptop,Medium
+Need VPN access for travel,Travelling next week need VPN configured,Medium
+Excel macro not working,Important macro broken after Windows update,Medium
+Second screen resolution issue,External monitor showing wrong resolution,Medium
+Forgot to logout remote session,Left remote desktop session open need to close,Medium
+USB port not working,Pen drive not detected on any USB port,Medium
+Laptop battery draining fast,Battery draining in 2 hours instead of 8,Medium
+Request for software installation,Need Postman installed for API testing work,Low
+How to take screenshot,Need to know shortcut for screenshot on Windows,Low
+Where to find HR portal,Cannot find link for HR
